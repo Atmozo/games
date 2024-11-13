@@ -26,7 +26,7 @@ const GameBoardMultiplayer: React.FC = () => {
 
   // Helper function to generate a random game ID
   const generateRandomId = (): string => {
-    return Math.random().toString(36).substring(2, 10); // Generates a random 8-character string
+    return Math.random().toString(36).substring(2, 10); 
   };
 
   useEffect(() => {
@@ -203,6 +203,7 @@ const GameBoardMultiplayer: React.FC = () => {
       <div className="flex justify-between mb-4">
         {isHost && connectedPlayers >= 2 && (
           <button
+      
             onClick={() => ablyClient!.channels.get(gameId).publish('gameStart')}
             className="px-6 py-2 bg-green-500 text-white rounded-3xl font-semibold shadow-md mx-2 mt-6 hover:bg-green-600 active:bg-green-700 transform transition duration-200 hover:scale-105 active:scale-95"
           >
@@ -222,7 +223,7 @@ const GameBoardMultiplayer: React.FC = () => {
         </div>
       )}
 
-      <input
+      {/* <input
         type="text"
         className="border border-gray-300 p-2 rounded-md w-full mb-4"
         placeholder="Enter a word..."
@@ -232,7 +233,7 @@ const GameBoardMultiplayer: React.FC = () => {
             e.currentTarget.value = '';
           }
         }}
-      />
+      /> */}
 
       <div className="mt-4">
         <h2 className="text-xl font-bold">Your Score: {score}</h2>
