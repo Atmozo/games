@@ -151,6 +151,7 @@ const GameBoardMultiplayer: React.FC = () => {
     if (upperWord.length < 3) {
       setMessage('Word must be at least 3 letters long.');
       return;
+      handleWordSubmit
     }
     setValidWords((prev) => [...prev, upperWord]);
     setScore((prev) => prev + upperWord.length);
