@@ -1,6 +1,6 @@
 // src/pages/Multiplayer.tsx
-import React, { useEffect, useState } from 'react';
-import GameBoard from '../components/GameBoardMultiplayer';
+import React, {  useState } from 'react';
+
 import GameBoardMultiplayer from '../components/GameBoardMultiplayer';
 
 interface Player {
@@ -10,7 +10,7 @@ interface Player {
 }
 
 const Multiplayer: React.FC = () => {
-  const [players, setPlayers] = useState<Player[]>([
+  const [players] = useState<Player[]>([
     { id: '1', name: 'Player 1', score: 0 },
     { id: '2', name: 'Player 2', score: 0 },
   ]);
